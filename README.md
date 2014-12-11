@@ -4,10 +4,10 @@
 
 1. All SSH access to AWS EC2 servers and to staging accounts is only allowed through bastion host(bastion.ylly.com) and prohibited directly.
 2. Access to bastion for all team members granted by running script create_users.sh(script must be run as root or with sudo permissions on bastion host)
-3. Any new devops guy who requires access to production servers must put his public key to devops/bastion/users/devops/*username*
-4. Any developer with role "Developer on Duty(DoD)" who requires access to production servers(web* and worker* only) must put his public key to devops/bastion/users/dods/<username>
-5. All other developers that need ssh access to staging accounts must put their public ssh keys to devops/bastion/users/devs/<username>
-6. When devops team member will run script create_users.sh new system accounts found in devops/bastion/users/dev*s/* on server bastion will be created with appropriate access keys
+3. Any new devops guy who requires access to production servers must put his public key to devops/bastion/users/devops/**username**
+4. Any developer with role "Developer on Duty(DoD)" who requires access to production servers(web* and worker* only) must put his public key to devops/bastion/users/dods/**username**
+5. All other developers that need ssh access to staging accounts must put their public ssh keys to devops/bastion/users/devs/**username**
+6. When devops team member will run script create_users.sh new system accounts found in devops/bastion/users/devs(devops,developers)/ on server bastion will be created with appropriate access keys
 7. Common access rules described on image above
 
 ![AWS bastion access](AWS-access-bastion.jpg)
@@ -33,9 +33,9 @@ root@ip-172-31-0-10:~#
 1. Receive confirmation from DevOps that your account on bastion was created.
 2. Login to bastion host using next command:
 <pre><code>
-$ ssh <username>@bastion.ylly.com
+$ ssh **username**@bastion.ylly.com
 </code></pre>
-Please make sure the <username> you are using the same as file name with public ssh key that was committed to devops repository as described in P.3 of Basic Concepts
+Please make sure the **username** you are using the same as file name with public ssh key that was committed to devops repository as described in P.3 of Basic Concepts
 3. Check access to any of AWS servers by next command from bastion host:
 <pre><code>
 $ ssh rmq
@@ -59,9 +59,9 @@ You should be logged to target server as ubuntu user which has sudo permissions 
 1. Receive confirmation from DevOps that your account on bastion was created.  
 2. Login to bastion host using next command:
 <pre><code>
-$ ssh <username>@bastion.ylly.com
+$ ssh **username**@bastion.ylly.com
 </code></pre>
-Please make sure the <username> you are using the same as file name with public ssh key that was committed to devops repository as described in P.4 of Basic Concepts  
+Please make sure the **username** you are using the same as file name with public ssh key that was committed to devops repository as described in P.4 of Basic Concepts  
 3. Check access to any of AWS servers(only with web or worker role) and to staging accounts by next command from bastion host:
 For web host:
 <pre><code>
@@ -87,9 +87,9 @@ You should be logged to target server as main user according to the server role(
 1. Receive confirmation from DevOps that your account on bastion was created.  
 2. Login to bastion host using next command:
 <pre><code>
-$ ssh <username>@bastion.ylly.com
+$ ssh **username**@bastion.ylly.com
 </code></pre>
-Please make sure the <username> you are using the same as file name with public ssh key that was committed to devops repository as described in P.5 of Basic Concepts  
+Please make sure the **username** you are using the same as file name with public ssh key that was committed to devops repository as described in P.5 of Basic Concepts  
 3. Check access to any staging accounts:
 <pre><code>
 $ ssh a@staging
