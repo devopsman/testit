@@ -4,7 +4,7 @@
 
 1. All SSH access to AWS EC2 servers and to staging accounts is only allowed through bastion host(bastion.ylly.com) and prohibited directly.
 2. Access to bastion for all team members granted by running script create_users.sh(script must be run as root or with sudo permissions on bastion host)
-3. Any new devops guy who requires access to production servers must put his public key to devops/bastion/users/devops/<username>
+3. Any new devops guy who requires access to production servers must put his public key to devops/bastion/users/devops/`username`
 4. Any developer with role "Developer on Duty(DoD)" who requires access to production servers(web* and worker* only) must put his public key to devops/bastion/users/dods/<username>
 5. All other developers that need ssh access to staging accounts must put their public ssh keys to devops/bastion/users/devs/<username>
 6. When devops team member will run script create_users.sh new system accounts found in devops/bastion/users/dev*s/* on server bastion will be created with appropriate access keys
