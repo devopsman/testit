@@ -14,14 +14,15 @@
 
 ## Security Director Guide
 
-### Creating bastion accounts for new DevOps/Developers
+### Creating bastion accounts for new DevOps/DoDs/Developers
 
 1. Go to devops/bastion/users and check if files for new accounts exist in dods directory(for new Developers on Duty members), devops directory(for new devops members) and in devs directory(for all other developers) respectively and contain correct rsa public keys(should begin with ssh-rsa and end with user's email address)
 2. Login to bastion server and switch to superuser mode:
+<pre><code>
 andrew@localhost:~$ ssh andruhon@bastion.ylly.com
 andruhon@ip-172-31-0-10:~$ sudo su -
 root@ip-172-31-0-10:~#
-
+</code></pre>
 3. Clone devops repository or pull existing one
 4. Run script devops/bastion/create_users.sh once and check output. Accounts for newly added keys should be created on bastion. The script will also invoke another script update_hosts.sh which will query aws servers and add/update correct records for them in /etc/hosts 
 
