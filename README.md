@@ -44,7 +44,7 @@ to connect to rmq host or
 <pre><code>
 $ ssh web1
 </code></pre>
-to connect to web1 host
+to connect to web1 host  
 You should be logged to target server as ubuntu user which has sudo permissions by default
 4. List of servers available for DevOps(the full list can be checked in ~/.ssh/config):
    * rmq
