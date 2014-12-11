@@ -32,12 +32,18 @@ root@ip-172-31-0-10:~#
 
 1. Receive confirmation from DevOps that your account on bastion was created.
 2. Login to bastion host using next command:
+<pre><code>
 $ ssh <username>@bastion.ylly.com
+</code></pre>
 Please make sure the <username> you are using the same as file name with public ssh key that was committed to devops repository as described in P.3 of Basic Concepts
 3. Check access to any of AWS servers by next command from bastion host:
+<pre><code>
 $ ssh rmq
+</code></pre>
 to connect to rmq host or
+<pre><code>
 $ ssh web1
+</code></pre>
 to connect to web1 host
 You should be logged to target server as ubuntu user which has sudo permissions by default
 4. List of servers available for DevOps(the full list can be checked in ~/.ssh/config):
@@ -52,13 +58,19 @@ You should be logged to target server as ubuntu user which has sudo permissions 
 
 1. Receive confirmation from DevOps that your account on bastion was created.
 2. Login to bastion host using next command:
+<pre><code>
 $ ssh <username>@bastion.ylly.com
+</code></pre>
 Please make sure the <username> you are using the same as file name with public ssh key that was committed to devops repository as described in P.4 of Basic Concepts
 3. Check access to any of AWS servers(only with web or worker role) by next command from bastion host:
 For web host:
+<pre><code>
 $ ssh web1
+</code></pre>
 For worker host:
+<pre><code>
 $ ssh worker1
+</code></pre>
 You should be logged to target server as main user according to the server role(web/worker). User does not have sudo permissions for security reason. Only `sudo service web|worker start|stop|restart` are allowed.
 4. List of servers available for DevOps:
    *  web1(web2,etc)
@@ -70,12 +82,18 @@ You should be logged to target server as main user according to the server role(
 
 1. Receive confirmation from DevOps that your account on bastion was created.
 2. Login to bastion host using next command:
+<pre><code>
 $ ssh <username>@bastion.ylly.com
+</code></pre>
 Please make sure the <username> you are using the same as file name with public ssh key that was committed to devops repository as described in P.5 of Basic Concepts
 3. Check access to any staging accounts:
+<pre><code>
 $ ssh a@staging
+</code></pre>
 to connect to `a` account or
+<pre><code>
 $ ssh staging@staging
+</code></pre>
 to connect to `staging` account
 4. List of servers available for Developers:
    *  staging
