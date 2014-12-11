@@ -62,7 +62,7 @@ You should be logged to target server as ubuntu user which has sudo permissions 
 $ ssh <username>@bastion.ylly.com
 </code></pre>
 Please make sure the <username> you are using the same as file name with public ssh key that was committed to devops repository as described in P.4 of Basic Concepts  
-3. Check access to any of AWS servers(only with web or worker role) by next command from bastion host:
+3. Check access to any of AWS servers(only with web or worker role) and to staging accounts by next command from bastion host:
 For web host:
 <pre><code>
 $ ssh web1
@@ -71,6 +71,10 @@ For worker host:
 <pre><code>
 $ ssh worker1
 </code></pre>
+For staging account:
+<pre><code>
+$ ssh staging@staging
+</code></pre>  
 You should be logged to target server as main user according to the server role(web/worker). User does not have sudo permissions for security reason. Only `sudo service web|worker start|stop|restart` are allowed.  
 4. List of servers available for DevOps:
    *  web1(web2,etc)
